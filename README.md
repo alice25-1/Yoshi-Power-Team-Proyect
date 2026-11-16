@@ -1,6 +1,6 @@
 # 🚀 Space Frogg: Mission to the Moon (Yoshi Power Team)
 
-An interactive educational space adventure inspired by NASA's **Artemis lunar exploration missions**. Players join Commander **Baudinii** and **Tongue** aboard the *Goliat* spacecraft, solving aerospace engineering challenges, managing critical power/mass trade-offs, and collecting lunar samples to transmit scientific discoveries back to Earth.
+An interactive educational space game inspired by **Artemis lunar exploration missions**. Players join Commander **Baudinii** and **Tongue** aboard the *Goliat* spacecraft, solving engineering challenges, managing critical trade-offs, and collecting lunar samples to transmit scientific discoveries back to Earth.
 
 ---
 
