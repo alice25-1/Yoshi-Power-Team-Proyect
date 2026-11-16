@@ -43,13 +43,13 @@ export default function DialogueBox({ dialogues = [], onClose }) {
 
   return (
     <>
-      {/* Ventana Emergente Obligatoria de Concepto NASA */}
+      {/* Ventana Emergente Obligatoria de Concepto Científico */}
       {showPopup && (
         <div className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 select-none">
           <div className="max-w-lg w-full metal-panel p-5 sm:p-6 text-left space-y-4 border-4 border-sky-400">
             <div className="border-b-4 border-slate-700 pb-2.5">
               <span className="text-[9px] sm:text-[10px] text-sky-400 font-bold">
-                NASA BRIEFING: {current.techTitle}
+                MISSION BRIEFING: {current.techTitle}
               </span>
             </div>
 

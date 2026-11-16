@@ -33,7 +33,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
       onClick={() => setActive(null)}
       className="space-hull relative min-h-screen text-white flex flex-col items-center justify-center p-6 overflow-hidden select-none"
     >
-      {/* Estrellas y pedazos de metal espacial */}
+
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-[14%] left-[25%] w-1.5 h-1.5 bg-white" />
         <div className="absolute top-[18%] right-[26%] w-1.5 h-1.5 bg-sky-300" />
@@ -49,7 +49,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
         <div className="absolute bottom-[26%] right-[12%] w-6 h-3 bg-slate-600 border-2 border-slate-950 shadow-[inset_2px_2px_0px_#cbd5e1]" />
       </div>
 
-      {/* 4 Placas STEM fijas en las 4 esquinas */}
+      
       {FIELDS.map((f) => (
         <div
           key={f.id}
@@ -71,7 +71,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
         </div>
       ))}
 
-      {/* Tongue (Morado) */}
+    
       <div style={{ transform: hop ? 'translateY(-10px)' : 'translateY(0px)' }} className="flex flex-col items-center absolute top-12 left-4 sm:top-20 sm:left-[20%]">
         <FrogSprite src="/assets/tongue.png" alt="Tongue" className="w-20 h-20 sm:w-32 sm:h-32" />
         <span className="metal-panel px-2 py-1 text-[8px] sm:text-[9px] text-purple-400 mt-1">
@@ -79,7 +79,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
         </span>
       </div>
 
-      {/* Baudinii (Verde café) */}
+      
       <div style={{ transform: !hop ? 'translateY(-10px)' : 'translateY(0px)' }} className="flex flex-col items-center absolute top-12 right-4 sm:top-20 sm:right-[20%]">
         <FrogSprite src="/assets/baudinii.png" alt="Baudinii" className="w-20 h-20 sm:w-32 sm:h-32" />
         <span className="metal-panel px-2 py-1 text-[8px] sm:text-[9px] text-lime-400 mt-1">
@@ -87,7 +87,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
         </span>
       </div>
 
-      {/* Froggy (Verde) */}
+      
       <div style={{ transform: !hop ? 'translateY(-10px)' : 'translateY(0px)' }} className="flex flex-col items-center absolute bottom-10 left-4 sm:bottom-16 sm:left-[22%]">
         <FrogSprite src="/assets/froggy.png" alt="Froggy" className="w-20 h-20 sm:w-32 sm:h-32" />
         <span className="metal-panel px-2 py-1 text-[8px] sm:text-[9px] text-emerald-400 mt-1">
@@ -95,7 +95,7 @@ export default function StartScreen({ unlockedChapter = 1, onSelectChapter }) {
         </span>
       </div>
 
-      {/* Frogatha (Naranja) */}
+      
       <div style={{ transform: hop ? 'translateY(-10px)' : 'translateY(0px)' }} className="flex flex-col items-center absolute bottom-10 right-4 sm:bottom-16 sm:right-[22%]">
         <FrogSprite src="/assets/frogatha.png" alt="Frogatha" className="w-20 h-20 sm:w-32 sm:h-32" />
         <span className="metal-panel px-2 py-1 text-[8px] sm:text-[9px] text-orange-400 mt-1">

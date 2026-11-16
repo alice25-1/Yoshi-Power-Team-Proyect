@@ -10,7 +10,7 @@ export default function FrogSprite({ src, alt, className = 'w-24 h-24' }) {
       const canvas = canvasRef.current;
       if (!canvas) return;
 
-      // Recorta solo la primera pose (cuadrante superior izquierdo de la hoja de 2x2)
+      
       const w = Math.floor(img.width / 2);
       const h = Math.floor(img.height / 2);
       canvas.width = w;
@@ -25,7 +25,7 @@ export default function FrogSprite({ src, alt, className = 'w-24 h-24' }) {
       const visited = new Uint8Array(w * h);
       const stack = [];
 
-      // Detecta solo el fondo blanco exterior (sin borrar el traje blanco de adentro)
+    
       const isWhiteBg = (idx) => {
         const r = data[idx], g = data[idx + 1], b = data[idx + 2];
         return r > 220 && g > 220 && b > 220;

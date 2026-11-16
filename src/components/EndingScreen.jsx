@@ -2,36 +2,36 @@ import PixelIcon from './PixelIcon';
 
 const ENDINGS = {
   SUCCESS: {
-    title: 'MISSION COMPLETE!',
-    tag: 'GOOD ENDING',
+    title: 'MISSION ACCOMPLISHED!',
+    tag: 'POST-MORTEM • FULL SUCCESS',
     titleColor: 'text-emerald-400',
     icon: 'earth',
-    summary: 'The crew docked with Goliat, survived the meteor storm, and deployed all lunar antennas.',
-    stem: 'ENGINEERING & TELECOMS: Lunar relay antennas require fuel budgeting and orbital precision to maintain Earth-Moon communications.',
+    summary: 'The crew docked with Goliat, balanced power through the meteor storm, gathered all lunar site data, and returned safely to share their findings with young scientists in Guatemala!',
+    stem: 'SYSTEMS ENGINEERING & USER SEGMENT: By balancing Attitude Control, Delta-V margins, and MDL Trade Studies across all 4 Mission Segments, your crew proved that Access to Space for All empowers future lunar missions.',
   },
   CRASH_DOCKING: {
-    title: 'ORBITAL CRASH!',
-    tag: 'GAME OVER • CH 1',
+    title: 'ORBITAL COLLISION!',
+    tag: 'POST-MORTEM • CH 1 FAILURE',
     titleColor: 'text-red-400',
     icon: 'rocket',
-    summary: 'Docking alignment failed, damaging both spacecraft modules in orbit.',
-    stem: 'ORBITAL MECHANICS: Spacecraft docking requires matching velocity and sub-meter alignment in microgravity.',
+    summary: 'Attitude Control lost alignment during final approach in Low Earth Orbit (7.66 km/s), damaging both spacecraft modules.',
+    stem: 'FLIGHT DYNAMICS LESSON: In microgravity there is no air friction to stop a drifting ship. Small, early thruster pulses are required to counter inertia and achieve sub-meter docking accuracy.',
   },
   NO_FUEL: {
-    title: 'OUT OF FUEL!',
-    tag: 'GAME OVER • CH 3',
+    title: 'POWER & DELTA-V DEPLETED!',
+    tag: 'POST-MORTEM • CH 2 FAILURE',
     titleColor: 'text-amber-400',
     icon: 'planet',
-    summary: 'Propellant dropped to 0% before completing the lunar antenna deployment.',
-    stem: 'PROPULSION PHYSICS: Every thruster burn consumes finite delta-v; efficient navigation saves mission fuel.',
+    summary: 'Sharp evasive maneuvers drained battery and propellant reserves below critical survival margins during lunar transit.',
+    stem: 'POWER & PROPULSION LESSON: Spacecraft carry limited mass and energy. Engineers must balance aggressive maneuvers with solar array recharge margins to keep thermal and guidance systems alive.',
   },
   PARTIAL_ANTENNAS: {
-    title: 'PARTIAL SIGNAL!',
-    tag: 'ALTERNATIVE ENDING',
+    title: 'PARTIAL DATA RETURNED!',
+    tag: 'POST-MORTEM • ALTERNATIVE ENDING',
     titleColor: 'text-purple-400',
     icon: 'antenna',
-    summary: 'The crew landed safely, but lost equipment reduced lunar communication coverage.',
-    stem: 'SYSTEMS REDUNDANCY: Space missions carry backup hardware to survive harsh lunar conditions.',
+    summary: 'The crew returned safely to Guatemala with valuable lunar measurements, but power trade-offs reduced collected data coverage to 2/3 sites.',
+    stem: 'ENGINEERING TRADE-OFFS LESSON: You made a smart survival choice to keep Goliat safe and warm, though sacrificing sensor power meant a follow-up precursor mission will be needed to survey the third site.',
   },
 };
 
@@ -58,22 +58,22 @@ export default function EndingScreen({ endingType = 'SUCCESS', stats, onRestart 
         </p>
 
         <div className="bg-slate-950 border-4 border-slate-800 p-4 text-left space-y-2">
-          <p className="text-[9px] text-sky-400">NASA STEM DEBRIEF:</p>
+          <p className="text-[9px] text-sky-400">SPACE SYSTEMS POST-MORTEM:</p>
           <p className="text-[9px] text-slate-300 leading-relaxed">{data.stem}</p>
         </div>
 
         {stats && (
           <div className="grid grid-cols-3 gap-2 bg-slate-950 border-2 border-slate-700 p-3 text-[9px]">
             <div>
-              <p className="text-slate-400 mb-1">FUEL</p>
+              <p className="text-slate-400 mb-1">ENERGY</p>
               <p className="text-amber-400">{stats.fuel}%</p>
             </div>
             <div>
-              <p className="text-slate-400 mb-1">ENGINES</p>
+              <p className="text-slate-400 mb-1">SYSTEMS</p>
               <p className="text-sky-400">{stats.engines}%</p>
             </div>
             <div>
-              <p className="text-slate-400 mb-1">ANTENNAS</p>
+              <p className="text-slate-400 mb-1">DATA</p>
               <p className="text-emerald-400">{stats.antennas}/3</p>
             </div>
           </div>
